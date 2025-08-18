@@ -1,0 +1,97 @@
+# 🌐 WEB DEVELOPMENT
+
+## 📌 What is Web Development?
+Basically Web Development is a process of building and maintaining websites and web applications.
+Web Development involves designing, coding, deploying, and maintaining a website or application.
+
+## 📌 Types of Web Development?
+a. Frontend Development.
+--> Frontend Development works on Client side.
+--> Focus on UI/UX design by using HTML,CSS,JAVASCRIPT.
+--> Frontend Development is a part of website that users interact with directly.
+--> Frontend Development uses framework like React, Angular and Vue.js.
+b. Backend Development.
+--> Backend Development works on Server side.
+--> Backend Development manages data, authentication and business logic using Nodejs Expressjs and database.
+--> Example of Backend frameworks are;
+               For Python-- Django,Flask,FastAPI.
+               For Javascript/Typescript-- Expressjs Nodejs Nestjs Koajs.
+               For Java-- Springboot,Micronaut.
+c. Full Stack Web Development.
+--> Full Stack Web Development is a combination of both frontend and backend technologies.
+
+## 📌 Key Components of  Web Development?
+a. Frontend Development.
+b. Backend Development.
+c. Database.
+--> Database stores and manages data for the website or application.
+--> Database can be SQL based which include MYSQL, Postgre SQL) or NoSQL based which include MongoDB.
+d. Version Control.
+--> Version Control helps in tracking and managing changes.
+--> Version Control includes Git, Github.
+
+## 📌 Workflow of a Full Stack Web Development Project?
+1. Requirement Gathering & Planning.
+--> It includes:
+                  Understand the goal of the project.
+                  Identify features: login/signup, dashboard, payments, etc.
+                  Decide tech stack (e.g., MERN: MongoDB, Express, React, Node.js OR MySQL + Express + React + Node.js).
+2. Design & Architecture
+--> It includes:
+          Create wireframes/UI design using Figma/Canva.
+          Define database schema (ERD diagrams: users, products, orders, etc.).
+          Plan API routes (REST or GraphQL).
+          Decide folder structure:
+project/
+├── backend/
+├── frontend/
+├── database/
+└── docs/
+
+3. Frontend Development (Client-Side)
+--> Frontend Development includes:
+                  Choosing the  framework (React, Angular, Vue, or plain HTML/CSS/JS).
+                  Build UI components (Navbar, Forms, Product Cards, etc.).
+                  Implement routing (React Router for SPAs).
+                  Connect to backend APIs using fetch / axios.
+                  Handle state management (Redux, Context API, etc.).
+4. Backend Development (Server-Side)
+--> Backend Development includes:
+                    Set up Node.js + Express (or Django, Spring Boot, etc.).
+                    Configure API routes.
+                    Add authentication (JWT, sessions).
+                    Implement business logic (e.g., order total calculation).
+                    Connect to database (MongoDB, MySQL, PostgreSQL).
+5. Database Design
+--> Database Design includes:
+             Create tables/collections that includes Users, Products, Orders, Messages,
+             Define relationships (1-to-many, many-to-many).
+             Write queries (SQL/NoSQL).
+             Implement validation and indexing.
+6. Integration (Frontend + Backend + DB)
+--> Integration includes:
+                Frontend sends requests → Backend processes → Database stores data.
+--> Example workflow:
+                          User clicks "Sign Up" → frontend form → POST /signup API.
+                          Backend validates + stores in DB.
+                          Response sent back to frontend → show success/failure.
+7. Testing
+--> Testing includes:
+                       Unit Testing: test functions/components individually.
+                       Integration Testing: check frontend-backend connection.
+                       User Acceptance Testing (UAT): ensure features work as expected.
+8. Deployment
+--> Deployment includes:
+                       Frontend: Deploy to Vercel, Netlify, or static hosting.
+                       Backend: Deploy to Railway, Render, AWS, or Heroku.
+                       Database: Hosted on MongoDB Atlas, MySQL Railway, or AWS RDS.
+                       Configure environment variables (.env for secrets).
+9. Monitoring & Maintenance
+--> Monitoring & Maintenance includes:
+                    Use logging & monitoring tools (Winston, Morgan, Datadog).
+                    Collect user feedback.
+                    Fix bugs, update features.
+                    Apply security patches (sanitize inputs, update dependencies).
+
+Summary of Workflow of Full Stack Web Development:
+-->  Plan → Design → Frontend → Backend → Database → Integration → Testing → Deployment → Maintenance
