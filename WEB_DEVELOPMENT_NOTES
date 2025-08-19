@@ -95,3 +95,263 @@ project/
 
 Summary of Workflow of Full Stack Web Development:
 -->  Plan → Design → Frontend → Backend → Database → Integration → Testing → Deployment → Maintenance
+
+
+
+# 🌐 Now Let's Come to HTML
+
+## 📌 What is HTML?
+--> Basically HTML stands for HyperText Markup Language.
+--> HTML is not a programming language  but a markup language used to create the structure and content of a webpage.
+--> HyperText: Refers to the "links" that connect web pages, allowing you to navigate the internet.
+    Markup Language: Refers to the use of "tags" (like <h1> or <p>) to define the layout and elements of your content.
+--> HTML is the skeleton of the page that gives every website its shape.
+
+## 📌 Key elements of HTML?
+a. heading.
+b. paragraph.
+c. links.
+d. images.
+
+## 📌 Why  HTML essential?
+a. to build websites.
+b. to understand other languages like CSS, JAVASCRIPT, REACT.
+
+## 📌 Structure of HTML?
+<!DOCTYPE html>              // shows that this is HTML5 document
+<html>                       // root elements and all contents comes under this
+  <head>                     // has invisible info like title, meta-tags, CSS
+    <title>My Website</title> 
+  </head>
+  <body>                     // visible content like heading,paragraph,image,form
+    <h1>Hello World</h1>
+    <p>This is my first website</p>
+  </body>
+</html>
+
+## 📌 Basic Tags in HTML?
+a. Heading tags.
+b. Paragraph tags.
+c. Line Break tags.
+d. links.
+e. images.
+f. center.
+g. listing tags.
+h. text formatting tags.
+i. fonts tags.
+j. tables tags.
+k. forms tags.
+l. Semantic HTML tags.
+m. <div> tags.
+n. <iframe> tags.
+o. <video> tags.
+p. <audio> tags.
+
+## 📌 Heading tags in HTML?
+--> HTML provides six levels of heading.
+--> <h1> is most important and is the biggest.<h6> is least important and is smallest.
+
+## 📌 paragraph tags in HTML?
+--> <p> tags used for text.
+--> <p> This is a paragraph.</p>
+
+## 📌 Line Break tags in HTML?
+--> The <br> tag is used to insert a line break in the text. 
+--> It forces the content after it to appear on the next line. 
+--> This tag is used whenever you want the text to break into a new line without starting a new paragraph.
+--> <p>Hello<br>You delivered your assignment on time.<br>Thanks<br>Mahnaz</p>
+Note: The <br> tag is an empty tag and does not need a closing tag.
+
+## 📌 links tags in HTML?
+--> <a href> tags are used for linking.
+--> <a href="https://google.com"> Go to Google. </a> 
+Here, a is anchor tag that is used to creates a hyperlinks. href attributes specify URL to which the links points.
+
+## 📌 images tags in HTML?
+--> <img src="image.jpg" alt="MyImage" width="200" height="150">
+Here, alt is alternative text if image not loads.
+
+## 📌 center tags in HTML?
+--> <center> tag previously used to align content to the center of a web page, is deprecated in HTML5. 
+--> You can use the text-align: center; property of CSS to center text or inline elements.
+--> example:
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Centering Content Example</title>
+   <style>
+      .center-text {
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <p>This text is not in the center.</p>
+   <p class="center-text">This text is in the center.</p>
+</body>
+</html>
+
+## 📌 listing tags in HTML?
+--> example
+<ul> 
+  <li>Milk</li>
+  <li>Bread</li>
+</ul>
+<ol>  
+  <li>Wake up</li>
+  <li>Brush teeth</li>
+</ol>
+Here, ul means unordered list and ol means ordered list.
+
+## 📌 text formatting tags in HTML?
+--> text formatting tags are:
+<b> → bold
+<i> → italic
+<u> → underline
+<strong> → important (bold with meaning)
+<em> → emphasized (italic with meaning)
+--> example
+<p>This is <b>bold</b>, <i>italic</i>, <u>underlined</u>.</p>
+<p>This is <strong>important</strong> and <em>emphasized</em>.</p>
+
+## 📌 fonts tags in HTML?
+--> fonts tags specifies the size, color, and face of the text to be displayed on the webpage.
+--> The <font> tag has three attributes called size, color, and face to customize your fonts. 
+--> The font and basefont tags are deprecated, and they are supposed to be removed in a future version of HTML. So they should not be used; rather, it's suggested to use CSS styles to manipulate your fonts.
+--> To set the font size of a web page, we use the size attribute. This attribute allows us to set the font size between 1 and 7, where 1 is the smallest font size whereas 7 is the largest. The default size of a font is 3.
+--> You can set the font face (family) using the face attribute.
+--> We can set any font color of our choice to the texts using the color attribute. To specify the color, we can use either the color name or hexadecimal code of that color.
+Standard Color Names
+ColorName	       Hex Value	
+aqua	           #00ffff	
+black	           #000000	
+blue	           #0000ff	
+fuchsia	         #ff00ff	
+green	           #008000	
+gray	           #808080	
+lime	           #00ff00	
+maroon	         #800000	
+navy	           #000080	
+olive	           #808000	
+purple	         #800080	
+red	             #ff0000	
+silver	         #c0c0c0	
+teal	           #008080	
+white	           #ffffff	
+yellow	         #ffff00	
+aliceblue	       #f0f8ff	
+antiquewhite	   #faebd7	
+aquamarine	     #7fffd4	
+azure	           #f0ffff	
+beige	           #f5f5dc	
+bisque	         #ffe4c4	
+blanchedalmond	 #ffebcd	
+blueviolet	     #8a2be2	
+brown	           #a52a2a	
+burlywood	       #deb887	
+cadetblue	       #5f9ea0	
+chartreuse	     #7fff00	
+chocolate	       #d2691e	
+coral	           #ff7f50	
+cornflowerblue	 #6495ed	
+cornsilk	       #fff8dc	
+crimson	         #dc143c	
+cyan	           #00ffff	
+darkblue	       #00008b	
+darkcyan	       #008b8b	
+darkgoldenrod	   #b8860b	
+darkgray	       #a9a9a9	
+darkgreen	       #006400	
+darkkhaki	       #bdb76b	
+darkmagenta	     #8b008b	
+darkolivegreen	 #556b2f	
+darkorange	     #ff8c00	
+darkorchid	     #9932cc	
+darkred	         #8b0000	
+darksalmon	     #e9967a	
+darkseagreen	   #8fbc8f	
+darkslateblue	   #483d8b	
+darkslategray	   #2f4f4f	
+darkturquoise	   #00ced1	
+darkviolet	     #9400d3	
+deeppink	       #ff1493	
+deepskyblue	     #00bfff	
+dimgray	         #696969	
+dodgerblue	     #1e90ff	
+firebrick	       #b22222	
+floralwhite	     #fffaf0	
+forestgreen	     #228b22	
+gainsboro	       #dcdcdc	
+ghostwhite	     #f8f8ff	
+gold	           #ffd700	
+goldenrod	       #daa520	
+gray	           #808080	
+greenyellow	     #adff2f	
+honeydew	       #f0fff0	
+hotpink	         #ff69b4	
+indianred	       #cd5c5c	
+indigo	         #4b0082	
+ivory	           #fffff0	
+khaki	           #f0e68c	
+lavender	       #e6e6fa	
+lavenderblush	   #fff0f5	
+lawngreen	       #7cfc00	
+lemonchiffon	   #fffacd	
+lightblue	       #add8e6	
+lightcoral	     #f08080	
+lightcyan	       #e0ffff	
+lightgoldenrodyellow	#fafad2	
+lightgreen	      #90ee90	
+lightgrey	        #d3d3d3	
+lightpink	        #ffb6c1	
+lightsalmon	      #ffa07a	
+lightseagreen	    #20b2aa	
+lightskyblue	    #87cefa	
+lightslategray	  #778899	
+lightsteelblue	  #b0c4de	
+lightyellow	      #ffffe0	
+limegreen	        #32cd32	
+linen	            #faf0e6	
+magenta	          #ff00ff	
+mediumblue	      #0000cd	
+mediumorchid	    #ba55d3	
+mediumpurple	    #9370db	
+midnightblue	    #191970	
+mistyrose	        #ffe4e1	
+moccasin	        #ffe4b5	
+oldlace	          #fdf5e6	
+orange	          #ffa500	
+orchid	          #da70d6	
+peachpuff	        #ffdab9	
+peru	            #cd853f	
+pink	            #ffc0cb	
+plum	            #dda0dd	
+purple	          #800080	
+rosybrown	        #bc8f8f	
+royalblue	        #4169e1	
+salmon	          #fa8072	
+sandybrown	      #f4a460	
+seagreen	        #2e8b57	
+sienna	          #a0522d	
+skyblue	          #87ceeb	
+slateblue	        #6a5acd	
+steelblue	        #4682b4	
+tan	               #d2b48c	
+thistle	          #d8bfd8	
+tomato	          #ff6347	
+violet	          #ee82ee	
+wheat	            #f5deb3	
+whitesmoke	       #f5f5f5	
+yellow	            #ffff00	
+yellowgreen	        #9acd32
+
+## 📌 tables tags in HTML?
+--> 
+## 📌 forms tags in HTML?
+## 📌 Semantic tags in HTML?
+## 📌 <div> tags in HTML?
+## 📌 <iframe> tags in HTML?
+## 📌 <video> tags in HTML?
+## 📌 <audio> tags in HTML?
+
+## 📌 What is Web Development?
