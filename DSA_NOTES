@@ -1,0 +1,35 @@
+# DSA Problem Solving Workflow
+
+1️. Understand the Problem
+--> Understand the problem by reading the problem statement and also analyzing what is the input format? what is output format? and what are the constraints?
+
+2️. Think of Naive (Brute Force) Solution
+--> Ask: If constraints were small, how would I solve it? Brute force is your baseline.
+
+3️. Optimize Step by Step
+--> Use patterns like,
+Sorting + Two pointers (2-sum, 3-sum, subarray problems).
+Hashing (count frequencies, store visited).
+Prefix/Suffix (subarray sums, Kadane, rain water).
+Stack/Queue (next greater, sliding window).
+Recursion/DP (overlapping subproblems).
+
+4️. Dry Run with Small Test Cases
+-->  Take tiny inputs (n=3, n=5). Manually simulate your logic.
+Example: Array = [16, 17, 4, 3, 5, 2]  From right: 2 ✅ leader, 5 ✅ leader, 17 ✅ leader, 16 ❌ not leader.
+--> It helps catch mistakes early.
+
+5️. Code the Solution
+--> Write clean code, Use functions and add comments for steps. Start with brute force if stuck, then optimize.
+
+6️. Test with Given + Edge Cases
+--> Edge cases: 
+Empty array
+Single element
+All same values
+Increasing/decreasing order
+
+7️. Analyze Complexity
+
+8️. Reflect & Generalize
+👉 Example: Leaders in array = similar to Next Greater Element.
