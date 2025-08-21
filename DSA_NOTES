@@ -1,35 +1,253 @@
-# DSA Problem Solving Workflow
+# DSA Problem Solving Workflow:
 
-1️. Understand the Problem
+Step 1️. Understand the Problem
 --> Understand the problem by reading the problem statement and also analyzing what is the input format? what is output format? and what are the constraints?
-
-2️. Think of Naive (Brute Force) Solution
+Step 2️. Think of Naive (Brute Force) Solution
 --> Ask: If constraints were small, how would I solve it? Brute force is your baseline.
-
-3️. Optimize Step by Step
+Step 3️. Optimize Step by Step
 --> Use patterns like,
 Sorting + Two pointers (2-sum, 3-sum, subarray problems).
 Hashing (count frequencies, store visited).
 Prefix/Suffix (subarray sums, Kadane, rain water).
 Stack/Queue (next greater, sliding window).
 Recursion/DP (overlapping subproblems).
-
-4️. Dry Run with Small Test Cases
+Step 4️. Dry Run with Small Test Cases
 -->  Take tiny inputs (n=3, n=5). Manually simulate your logic.
 Example: Array = [16, 17, 4, 3, 5, 2]  From right: 2 ✅ leader, 5 ✅ leader, 17 ✅ leader, 16 ❌ not leader.
 --> It helps catch mistakes early.
-
-5️. Code the Solution
+Step 5️. Code the Solution
 --> Write clean code, Use functions and add comments for steps. Start with brute force if stuck, then optimize.
-
-6️. Test with Given + Edge Cases
+Step 6️. Test with Given + Edge Cases
 --> Edge cases: 
 Empty array
 Single element
 All same values
 Increasing/decreasing order
-
-7️. Analyze Complexity
-
-8️. Reflect & Generalize
+Step 7️. Analyze Complexity
+Step 8️. Reflect & Generalize
 👉 Example: Leaders in array = similar to Next Greater Element.
+
+
+# DSA array Problem Solving Workflow:
+
+Step 1. Understand the Problem (U)
+--> What should be input, output and restate problem in your own words.
+Step 2. Check Constraints (C)
+--> Check that What is the size of n?
+n ≤ 10³ → O(n²) acceptable
+n ≤ 10⁵ → O(n log n) or O(n)
+n ≤ 10⁷ → Only O(n)
+Step 3. Brute Force First (B)
+--> Imagine the most direct solution even if slow, it builds understanding.
+Step 4. Optimize with Patterns (O)
+--> Optimize with patterns by asking the following questions like, 
+Can I avoid repeated work?
+Useful techniques for arrays:
+Prefix / Suffix arrays              
+Two Pointers        
+Sliding Window
+Sorting + Binary Search
+Hashing (Map/Set)
+Stack/Queue/Heap
+Dynamic Programming
+Step 5. Dry Run (D)
+--> Take a small input.
+Walk through your logic step by step.
+Track variables on paper.
+Step 6. Complexity Analysis (C)
+--> Time: How many loops/operations?
+Space: Any extra arrays, sets, stacks used?
+Step 7. Edge Cases (E)
+-->  Always check:
+Empty array → []
+Single element → [x]
+All elements same → [5,5,5]
+Sorted increasing → [1,2,3,4]
+Sorted decreasing → [9,8,7,6]
+
+## 🚀Formula to Remember:-
+👉 U-C-B-O-D-C-E
+Understand
+Constraints
+Brute force
+Optimize
+Dry run
+Complexity
+Edge cases
+✅ With this checklist, you’ll have a structured way to solve any array problem.
+
+
+# DSA Stack Problem Solving Workflow:
+
+Step 1. Understand the Problem (U)
+--> First of all we all need to understand the problem which shows what the problem is about:
+Matching pairs? (Balanced parentheses, valid expression)
+Next element? (Next Greater/Smaller Element, Stock Span)
+Span/Range? (Histogram area, Sliding window min/max)
+Function calls? (Recursion simulation, Undo/Redo)
+Custom stack? (Min Stack, Two Stacks in one array)
+Step 2. Check Constraints (C)
+--> In this step we all need to check Constraints which means what is the constraint about which includes,
+Input size n →
+If n is large (10⁵ or more), O(n log n) / O(n) solution needed.
+Value ranges (negative allowed? duplicates?).
+Step 3. Brute Force Approach (B)
+--> In this step what are the brute force approach which we used for solving stack problem
+Use nested loops to simulate the operation.
+Check time complexity → usually O(n²).
+Step 4. Optimize with Stack Patterns (O)
+--> This step shows that how Optimize with Stack patterns.
+--> Common Stack Patterns are as follows:
+Monotonic Stack
+Next Greater Element
+Next Smaller Element
+Largest Rectangle in Histogram
+Balanced Parentheses
+Push opening, pop on closing.
+Stack empty = valid.
+Stock Span Problem
+Use stack to store previous higher prices.
+Min/Max Stack
+Maintain auxiliary stack for min/max.
+Expression Problems
+Infix → Postfix (Shunting Yard)
+Evaluate Postfix/Prefix
+Special Structures
+Stack using Queue
+Queue using Stack
+Step 5. Dry Run (D)
+--> This step shows that before coding we need to do dry run by-
+Always test with small input:
+Parentheses: "(()[])”
+NGE: [4, 5, 2, 25]
+Histogram: [2, 1, 5, 6, 2, 3]
+Step 6. Complexity Check (C)
+--> This steps checks Complexity of any code. Complexity of any code can be checked by-
+Most optimized stack problems → O(n)
+Auxiliary space → O(n)
+Step 7. Edge Cases (E)
+--> This steps checks Edge Cases which includes-
+Empty input → []
+Single element stack → [x]
+All elements same → [5,5,5]
+Increasing / decreasing order arrays
+Invalid expressions → "(()" or "([)]"
+🚀 Formula for Stack Problems
+👉 U-C-B-O-D-C-E (same universal steps, but optimized for stack)
+And always ask:
+“Can I solve this by maintaining a monotonic stack?”
+“Do I need to track indices instead of values?”
+“Is it a parentheses matching / expression evaluation problem?”
+⚡ With this checklist, you’ll have a ready reference for stack problems.
+
+
+
+# DSA Queue Problem Solving Workflow
+
+Step 1. Understand the Problem (U)
+--> Ask yourself:
+Is it about FIFO order (first in, first out)
+Do I need a basic queue, circular queue, deque (double-ended queue), or priority queue (heap)?
+--> Is the problem related to:
+Simulation? (process scheduling, ticketing, task execution)
+Traversal? (BFS in graphs/trees)
+          Sliding Window? (max/min in subarrays)
+                  Custom design? (Queue using Stacks, Stack using Queues)
+Step 2. Check Constraints (C)
+--> In this step checks for constraints like,
+                    Input size (n).  For n ≤ 10⁵, use O(n) or O(n log n).
+                    For huge inputs, use deque/heap for efficiency.
+Step 3. Brute Force (B)
+--> In this step check for which brute force to be followed like, 
+                         Use array/list and simulate enqueue/dequeue with shifting.
+                         Time complexity often becomes O(n²) → too slow.
+Step 4. Optimize with Queue Patterns (O)
+--> In this steps we will optimize with patterns like,
+                       Simple Queue (FIFO)
+                       Enqueue at rear, Dequeue at front.
+                       Use linked list or collections.deque (Python) / LinkedList (Java).
+                       Circular Queue
+                       Handles queue overflow in fixed-size arrays.
+                       Double-Ended Queue (Deque)
+                       Sliding Window Maximum / Minimum.
+                       Palindrome check.
+                       Priority Queue (Heap)
+                       Dijkstra’s Algorithm.
+                       Huffman Coding.
+                       Kth Largest / Smallest element.
+                       Queue-based Traversals
+                       BFS in Graphs & Trees.
+                       Level Order Traversal.
+                       Design Problems
+                       Queue using Stacks.
+                      Stack using Queues.
+Step 5. Dry Run (D)
+-->  Try small examples:
+                        Queue basics: enqueue(1), enqueue(2), dequeue() → [2]
+                        BFS: Graph edges 1-2, 1-3 → Order: [1,2,3]
+                        Sliding Window: [1,3,-1,-3,5,3,6,7], k=3 → [3,3,5,5,6,7]
+Step 6. Complexity Check (C)
+-->  In this step we need to check complexities of a code like, 
+                          Enqueue/Dequeue → O(1) in array-based circular queue, linked list, deque.
+                          Priority Queue operations → O(log n).
+                          BFS → O(V + E).
+                          Sliding Window with deque → O(n).
+Step 7. Edge Cases (E)
+--> In this step we need to check Edge Cases like,
+                     Empty queue → dequeue should fail safely.
+                     Full queue in circular array.
+                     Single element.
+                     Repeated elements.
+                     Disconnected graph (for BFS).
+
+🚀 Formula for Queue Problems
+👉 U-C-B-O-D-C-E
+                          Understand problem type (FIFO, BFS, sliding window, heap).
+                          Constraints.
+                          Brute force (simulate with list/array).
+                          Optimize (deque, heap, linked list).
+                          Dry run small input.
+                          Complexity check.
+                          Edge cases.
+
+🚀 Formula for Queue Problems
+👉 U-C-B-O-D-C-E (same universal steps, but optimized for Queue)
+And always ask:
+                   “Can I solve this by maintaining a monotonic stack?”
+                   “Do I need to track indices instead of values?”
+                   “Is it a parentheses matching / expression evaluation problem?”
+
+⚡ With this checklist, you’ll have a ready reference for Queue problems.
+
+# DSA Linkedlist Problem Solving Workflow
+
+
+🚀 Formula for Linkedlist Problems
+👉 U-C-B-O-D-C-E (same universal steps, but optimized for Linkedlist)
+And always ask:
+“Can I solve this by maintaining a monotonic stack?”
+“Do I need to track indices instead of values?”
+“Is it a parentheses matching / expression evaluation problem?”
+⚡ With this checklist, you’ll have a ready reference for Linkedlist problems.
+
+# DSA Trees Problem Solving Workflow
+
+
+🚀 Formula for Trees Problems
+👉 U-C-B-O-D-C-E (same universal steps, but optimized for Trees)
+And always ask:
+“Can I solve this by maintaining a monotonic stack?”
+“Do I need to track indices instead of values?”
+“Is it a parentheses matching / expression evaluation problem?”
+⚡ With this checklist, you’ll have a ready reference for Trees problems.
+
+# DSA Graph Problem Solving Workflow
+
+
+🚀 Formula for Graph Problems
+👉 U-C-B-O-D-C-E (same universal steps, but optimized for Graph)
+And always ask:
+“Can I solve this by maintaining a monotonic stack?”
+“Do I need to track indices instead of values?”
+“Is it a parentheses matching / expression evaluation problem?”
+⚡ With this checklist, you’ll have a ready reference for Graph problems.
