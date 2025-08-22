@@ -408,3 +408,54 @@ Here, type="text, email, password, number, radio, checkbox, date".
   Your browser does not support audio.
 </audio>
 
+
+
+
+# 🌐 Now Let's Come to CSS
+
+## 📌 What is CSS?
+--> CSS stands for Cascading Style Sheets. CSS is used to style web pages, making them visually appealing. CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
+--> CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.
+
+## 📌 Why do we use CSS?
+--> 
+a. CSS provides efficiency in webpage design: It also provides updates so our webpage works appropriately. With the help of CSS, we can create and apply those rules within the website. If we create a webpage design separately, we can make changes in our style sheet, and it will affect all the style sheets.
+b. CSS provides faster page download: CSS helps with faster page download because when we download a page, we get the cache that helps to load a page, but with the help of CSS, we can lead to load a lighter page which helps to improve the performance.
+c. CSS is easy to work: In CSS, we can visual aspect of the website separate entirely from the content; using CSS, we can create a website that allows us to make quick layou0074.
+
+## 📌 Advantages of  CSS?
+--> 
+a. Faster page speed: It has a faster page speed than other code's page speeds. With the help of the CSS rule, we can apply it to all occurrences of certain tags in HTML documents.
+b. Better user experience: CSS makes a webpage very attractive to the eyes. Also, CSS makes it user-friendly. When the button or text is in a proper format, it improves the user experience.
+c. Quicker Development time: With the help of CSS, we can specify the format and style the multiple pages into one code string. In cascading style sheet, we can make a duplicate copy of several website pages.
+d. If we make a webpage, it has the same formatting, looks, and feel, so with the help of the CSS rule for one page, and it is sufficient for all the pages.
+e. Easy Formatting changes: In CSS, if we need to make changes in the format, it is very easy; we only need to change the one-page format it will automatically apply to the other pages of CSS.
+f. There is no need to correct individual pages in a CSS style sheet. If we fix a CSS style sheet, it will automatically update the other CSS style sheet.
+g. Compatibility: Compatibility is very important in today's age. If we create any webpage, it should be very responsive and user-friendly. CSS is used with Html to make webpage design responsive.
+
+## 📌 Examples of CSS?
+--> <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body {  
+  background-color:  lightblue;  
+}  
+h1 {  
+  colour: white;  
+  text-align: center;  
+}  
+p {  
+  font-family: Verdana;  
+  font-size: 20px;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>My First CSS Example</h1>  
+<p>This is a paragraph.</p>  
+</body>  
+</html>  
+## 📌 Types of CSS?
+## 📌 Selectors of CSS?
+## 📌 Comments of CSS?
