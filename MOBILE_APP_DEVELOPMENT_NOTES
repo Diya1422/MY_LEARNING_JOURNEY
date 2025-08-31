@@ -122,3 +122,25 @@ Frontend = XML + Java (inside the app)
 Instead of browser → user interacts with mobile app
 Deployment = APK on Play Store instead of hosting a website
 Android App Development Workflow (Like Full-Stack Web Dev)
+
+## WEB DEVELOPMENT vs ANDROID APP DEVELOPMENT:
+          🌐 Web Development                        📱 Android App Development
+ ──────────────────────────────────────────   ──────────────────────────────────────────
+   1. Frontend (UI Layer)                        1. Frontend (UI Layer)
+   - HTML → Structure                             - XML → Structure (layouts, widgets)
+   - CSS  → Styling                               - Resources (colors.xml, styles.xml, drawables)
+   - JS   → Logic/Interactivity                   - Java/Kotlin → Logic (events, actions)
+
+   2. Communication Layer                         2. Communication Layer
+   - fetch/axios → API call                       - Retrofit/Volley/OkHttp → API call
+   - JSON response from server                    - JSON response from server
+
+   3. Backend (Server + Logic)                    3. Backend (Server + Logic)
+   - Node.js, Django, Spring Boot, etc.           - Same (Node.js, Django, Spring Boot, etc.)
+   - APIs (REST/GraphQL)                          - APIs (REST/GraphQL)
+   - Business Logic                               - Business Logic
+
+   4. Database Layer                              4. Database Layer
+   - MySQL, MongoDB, PostgreSQL                   - MySQL, MongoDB, PostgreSQL
+   - LocalStorage / IndexedDB                     - SQLite / Room / SharedPreferences
+
