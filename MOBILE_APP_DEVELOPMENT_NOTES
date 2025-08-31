@@ -1,0 +1,62 @@
+# Android App Development Workflow (Java + XML)
+
+## Setup of Android App Development:
+Step 1: Project Setup
+--> In Android Studio, you create a new project.
+--> The project mainly has:
+                       XML files (res/layout) → for UI design (like HTML in web)
+                       Java files (src/...) → for logic (like JavaScript in web)
+--> Web analogy:
+HTML → XML
+JavaScript → Java
+Step 2: Design the UI (XML)
+--> You design the screen using XML tags (TextView, Button, ImageView, etc.).
+--> Example:
+<Button
+    android:id="@+id/btnClick"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click Me"/>
+This is just like writing <button>Click Me</button> in HTML.
+Step 3: Connect UI with Logic
+--> Each UI element in XML must be connected in Java using findViewById().
+--> Example:
+Button btnClick = findViewById(R.id.btnClick);
+--> In web: document.getElementById("btnClick") does the same.
+Step 4: Handle Events
+--> You add listeners in Java to handle events like button clicks.
+--> Example:
+btnClick.setOnClickListener(v -> {
+    // action when clicked
+});
+--> In web:
+button.addEventListener("click", function(){});
+Step 5: Activity Lifecycle
+--> Each Android screen is an Activity (like a web page).
+Lifecycle methods:
+onCreate() → when screen is created
+onResume() → when screen is visible
+onPause() → when screen goes into background
+Step 6: Multiple Screens (Activities)
+--> To move from one screen to another, you use Intents.
+--> Example:
+Intent i = new Intent(MainActivity.this, SecondActivity.class);
+startActivity(i);
+--> In web: This is like clicking a link and navigating to another page.
+Step 7: Data Storage
+--> Ways to store data in Android:
+SharedPreferences → small key-value data (like cookies/localStorage in web)
+SQLite Database → structured data (like MySQL in web)
+Files/Internal Storage → for files
+Firebase/API → online data storage
+Step 8: Networking / API Calls
+--> To fetch data from the internet (like weather info), you call APIs using libraries (Volley/Retrofit).
+Parse JSON → display on screen.
+Same as using fetch() or axios in web.
+--> Step 9: Testing
+Test your app in the Emulator or on a real device.
+--> Step 10: Deployment
+Build the APK file of the app.
+Publish it on the Google Play Store.
+👉 This is just like hosting and deploying a website.
+
