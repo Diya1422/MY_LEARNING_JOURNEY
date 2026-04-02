@@ -1,0 +1,312 @@
+I.	Arrays:
+
+1.	Traversal-
+--> Means visit every element.
+--> Formula:               Go from 0 → n-1
+public class TraversalArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {30,10,20,50,70,90};
+        for(int i = 0; i < arr.length; i++)
+        {
+            System.out.println(arr[i]);
+        }  }   }
+
+2.	Find maximum-
+--> Assume first element is max, Compare with others and then Update if bigger found.
+public class MaximumArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {30,10,20,50,70,90};
+        int max = arr[0];
+        for(int i = 1; i < arr.length; i++)
+        {
+            if(arr[i] > max)
+            {
+                max = arr[i];
+            }    }
+            System.out.println("Maximum is : "+max);
+    }   }
+
+3.	Linear search-
+--> Check each element one by one. If found → return index.
+public class LinearSearchArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {30,10,20,50,70,90};
+        int target = 60;
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] == target)
+            {
+                System.out.println("Element found at index : " +i);
+            }    }
+        System.out.println("Element does not found");
+    }    }
+
+4.	Reverse an array-
+--> Formula:          Swap start ↔ end   and     Move inward.
+public class ReverseArray
+{
+    public static void main(String[] args) 
+    {
+        int arr[] = {10,50,60,70,20};
+        int n = arr.length;
+        for(int i = n - 1; i>=  0; i--)
+        {
+            System.out.println(arr[i] + " ");
+        }     }    }
+
+5.	Find sum of array
+--> Formula:           sum = sum + arr[i]
+public class SumOfArray
+{
+    public static void main(String[] args) 
+    {
+        int arr[] = {10,50,60,70,20};
+        int sum = 0;
+        for(int i = 0; i <  arr.length; i++)
+        {
+            sum = sum + arr[i];
+        }     
+        System.out.println(sum);
+    }    }
+
+6.	Count even and odd numbers:
+--> Formula:             if (arr[i] % 2 == 0) → even
+public class CountOddEvenArray
+{
+    public static void main(String[] args) 
+    {
+        int arr[] = {10,15,20,25,30};
+        int Even = 0, Odd = 0;
+        for(int i = 0; i <  arr.length; i++)
+        {
+            if(arr[i] % 2 == 0)
+            {
+                Even++;
+            }
+            else
+            {
+                Odd++;
+            }   }     
+        System.out.println("Even count: " + Even);
+        System.out.println("Odd count: " + Odd);
+    }   }
+
+7.	Prefix sum
+--> Idea:                   Store sum till each index
+--> arr = [1,2,3,4]                             prefix = [1,3,6,10]
+public class PrefixSumOfArray
+{
+    public static void main(String[] args) 
+    {
+        int[] arr = {1,2,3,4};
+        int[] prefix = new int[arr.length];
+        prefix[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) 
+        {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
+        for (int i = 0; i < prefix.length; i++) 
+        {
+            System.out.print(prefix[i] + " ");
+        }   }   }
+
+8.	Sliding window
+--> SLIDING WINDOW = “MOVING WINDOW”
+
+--> Imagine:         You have a window of size k and You slide it over array. 
+
+--> Example:            arr = [2, 1, 5, 1, 3, 2],     k = 3      Window moves like this:
+[2, 1, 5] → sum = 8
+   [1, 5, 1] → sum = 7
+      [5, 1, 3] → sum = 9
+         [1, 3, 2] → sum = 6
+
+--> MAIN IDEA (REMEMBER FOREVER)
+•	Just      REMOVE left  +  ADD right
+
+--> SUPER FORMULA:    windowSum = windowSum - arr[i-1] + arr[i+k-1]
+
+--> MEMORY TRICK:          START → first k sum then MOVE → -left +right and then CHECK → max.
+
+public class SlidingSumOfSubArray
+{
+    public static void main(String[] args) 
+    {
+        int[] arr = {10,50,60,70,20};
+        int k = 3;
+        int Sum = 0;
+        for(int i = 0; i < k; i++)
+        {
+            Sum += arr[i];
+        }
+        int maxSum = Sum;
+        for (int i = 1; i <= arr.length - k; i++) 
+        {
+            Sum = Sum - arr[i - 1] + arr[i + k - 1];
+            if (Sum > maxSum) 
+            {
+                maxSum = Sum;
+            }   }
+        System.out.println(maxSum);
+    }    }
+
+9.	Second Largest Element
+--> Formula:     keep max and secondMax
+
+--> Every number ask am I biggest and if yes then it becomes new max and old max becomes second. If no then ask am I better than second if it is yes then update second.
+
+public class SecondLargestArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {10,20,30,70,40,80};
+        int max, SecondMax;
+        if(arr[0] > arr[1])
+        {
+            max = arr[0];
+            SecondMax = arr[1];
+        }
+        else
+        {
+            max = arr[1];
+            SecondMax = arr[0];
+        }
+        for(int i = 2; i < arr.length; i++)
+        {
+            if(arr[i] > max)
+            {
+                SecondMax = max;
+                max = arr[i];
+            }
+            else if(arr[i] > SecondMax && arr[i] != max)
+            {
+                SecondMax = arr[i];
+            }    }
+        System.out.println(SecondMax);
+    }   }
+
+
+10.	Move Zeros to End
+--> Formula:      place non-zero first
+--> Move all 0 to end and Keep non-zero in front.
+--> arr[i] != 0 → swap with j → j++
+public class MoveZeroEndArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {10, 0, 20, 0, 30, 70};
+        int j = 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] != 0)
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                j++;
+            }   }
+        for(int i = 0; i < arr.length; i++)
+        {
+            System.out.println(arr[i] + " ");
+        }  }  }
+
+11.	Check Sorted Array
+--> Formula:                arr[i] <= arr[i+1]
+--> Loop → compare neighbours → break if wrong
+public class SortedArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {10,20,30,40,60,50};
+        boolean IsSorted = true;
+        for(int i = 0; i < arr.length - 1; i++)
+        {
+            if(arr[i] >= arr[i+1])
+            {
+                IsSorted = false;
+                break;
+            }    }
+        System.out.println(IsSorted);
+    }    }
+
+12.	Remove Duplicates (Sorted Array)
+--> Formula:      use two pointers
+public class RemoveDuplicateArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {10,20,20,30,30,30,40,40,40};
+        int j = 0;
+        for(int i = 1; i < arr.length; i++)
+        {
+            if(arr[i] != arr[j])
+            {
+                j++;
+                arr[j] = arr[i];
+            }     }
+        for(int i = 0; i <= j; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }   }     }
+
+13.	TWO POINTER:          
+
+--> 2 pointer = “TWO PEOPLE WALKING”
+
+--> Imagine:   One person at start (left),  One person at end (right) 
+
+--> [ 1   2   3   4   6 ]
+  L               R
+
+--> MAIN IDEA:               CHECK → MOVE POINTERS
+
+--> GOLDEN RULE:      If sum small → move LEFT →                                  If sum big   → move RIGHT ←
+
+--> WHEN TO USE TWO POINTER?
+•	Sorted array                         Pair / sum problem
+•	Remove duplicate.               Reverse array
+
+--> TYPES OF TWO POINTER
+a.	Type 1: Opposite direction                  left → ← right
+b.	Type 2: Same direction                     left → right →
+
+--> Used in:
+a.	Remove duplicates                            
+b.	Move zeros 
+
+--> FORMULA
+1. Take left & right
+2. Check condition
+3. Move pointers
+
+14.	Largest Subarray Sum (Kadane’s Algorithm)
+--> Formula:            sum += arr[i]            if sum < 0 → reset
+public class LargestSubArray
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {10,20,30,40,50,80};
+        int sum = arr[0];
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) 
+        {
+            if (sum + arr[i] > arr[i]) 
+            {
+                sum = sum + arr[i];
+            } 
+            else 
+            {
+                sum = arr[i];
+            }
+            if (sum > max) 
+            {
+                max = sum;
+            }    }
+        System.out.println(max);
+    }   }
